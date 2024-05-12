@@ -1,3 +1,191 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    background: #f4f4f4;
+    background-color: white;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.invitation, .timeline{
+    height: 100%;
+    width: 100%;
+}
+
+.invitation {
+    position: absolute;
+    background: white;
+}
+
+.invitation.invitation-intro {
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation.invitation-intro h1 span {
+    display: block;
+    line-height: 0.85;
+    text-align: center;
+}
+
+.invitation.invitation-intro h1 span:nth-child(2) {
+    color: red;
+}
+
+.invitation.invitation-home {
+    z-index: 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.invitation.invitation-home .invitation-img{
+    position: relative;
+}
+
+.invitation.invitation-home .invitation-img::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    left: 0;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg) bottom;
+    background-size: 200%;
+    transform: rotate(180deg);
+}
+
+.invitation.invitation-home h2 {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45px;
+    color: white;
+    text-shadow: 1px 1px 24px #0a0a0a;
+}
+
+.invitation.invitation-home .the-married-ones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.invitation.invitation-home .the-married-ones span {
+    display: block;
+    line-height: 0.75;
+    text-align: center;
+    font-size: 65px;
+    text-transform: uppercase;
+}
+
+.invitation.invitation-home .the-married-ones span:nth-child(2) {
+    color: red;
+}
+
+.invitation.invitation-join {
+    z-index: 2;
+}
+
+.invitation.invitation-join .bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, #0a0a0a, transparent);
+}
+
+.invitation.invitation-join h2 {
+    text-align: center;
+    padding-top: 35px;
+    color: white;
+    text-shadow: 1px 1px 34px #0a0a0a;
+}
+
+.invitation.invitation-join img {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.invitation.invitation-join .time {
+    margin-top: auto;
+    color: white;
+    font-size: 130px;
+    display: grid;
+    grid-template-areas:
+        "day month"
+        "year year";
+    column-gap: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.invitation.invitation-join .day {
+    position: relative;
+}
+
+.invitation.invitation-join .day:before {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    right: -10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.invitation.invitation-join .year {
+    grid-area: year;
+}
+
+.invitation.invitation-join .location {
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+.invitation.invitation-contact {
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: url(./10.jpg);
+    color: #FFD700;
+    color: #FFCC00;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.invitation.invitation-contact h3 {
+    font-size: 60px;
+    text-align: center;
+    padding: 50px;
+}
+
+.invitation.invitation-contact h4 {
+    text-align: center;
+    line-height: 4;
+    font-size: 25px;
 }

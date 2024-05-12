@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?ver=<?= date("s") ?>.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Invitation aux Fiançailles de Mathilde et Ludovic</title>
 </head>
 <body>
-    <div class="container">
-        <div class="timeline">
-            <div class="invitation-intro">
-                <h1><span>Vous êtes</span> <span>cordialement</span> <span>invité</span></h1>
+    <div class="timeline">
+        <div class="invitation invitation-intro">
+            <h1><span>Vous êtes</span> <span>cordialement</span> <span>invité</span></h1>
+        </div>
+        <div class="invitation invitation-home">
+            <div class="invitation-img">
+                <img src="./3.jpg">
             </div>
-            <div class="invitation-home">
-                <h2>Pour célébrer les<br> fiançailles de</h2>
-                <img src="./1.jpg">
-                <div class="the-married-ones">
-                    <h2><span>Mathilde</span><span> & </span><span>Ludovic</span></h2>
-                </div>
-            </div>
-            <div class="invitation-join-us">
-                <h2>Rejoignez-nous le</h2>
-                <img src="./2.jpg" alt="">
+            <div class="the-married-ones"><span>Mathilde</span><span> & </span><span>Ludovic</span></div>
+            <h2>Pour célébrer les<br> fiançailles de</h2>
+        </div>
+        <div class="invitation invitation-join">
+            <h2>Rejoignez-nous le</h2>
+            <img src="./2.jpg" alt="">
+            <div class="bottom">
+                
                 <div class="time">
                     <div class="day">21</div>
                     <div class="month">07</div>
                     <div class="year">2024</div>
                 </div>
                 <div class="location">
-                    <p>à 12h00<br> chez Irise Traiteur à Saint-Joseph</p>
+                    <p>à 12h00 chez Irise Traiteur à Saint-Joseph</p>
                 </div>
             </div>
-            <div class="invitation-contact">
-                <h3>Merci de confirmer votre présence</h3>
-                <h4>Au plus tard, le <br><span>1er juillet</span></h4>
-            </div>
+        </div>
+        <div class="invitation invitation-contact">
+            <h3>Merci<br> de confirmer votre présence</h3>
+            <h4>Au plus tard, le <br><span>1er juillet</span></h4>
         </div>
     </div>
 
