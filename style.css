@@ -4,8 +4,12 @@
     padding: 0;
 }
 
+:root{
+    --white: #f4f4f4;
+}
+
 body{
-    background-color: white;
+    background-color: var(--white);
     height: 100vh;
     overflow-y: hidden;
 }
@@ -26,7 +30,7 @@ img{
 
 .invitation {
     position: absolute;
-    background: white;
+    background: var(--white);
 }
 
 .invitation.invitation-intro {
@@ -49,11 +53,12 @@ img{
 .invitation.invitation-home {
     z-index: 3;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
 }
 
 .invitation.invitation-home .invitation-img{
     position: relative;
+    overflow: hidden;
 }
 
 .invitation.invitation-home .invitation-img::after {
@@ -74,7 +79,7 @@ img{
     left: 0;
     right: 0;
     top: 45px;
-    color: white;
+    color: var(--white);
     text-shadow: 1px 1px 24px #0a0a0a;
 }
 
@@ -99,6 +104,9 @@ img{
 
 .invitation.invitation-join {
     z-index: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .invitation.invitation-join .bottom {
@@ -112,24 +120,32 @@ img{
 .invitation.invitation-join h2 {
     text-align: center;
     padding-top: 35px;
-    color: white;
+    color: var(--white);
     text-shadow: 1px 1px 34px #0a0a0a;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.invitation.invitation-join .join-img {
+    grid-row: 1 / span 4;
 }
 
 .invitation.invitation-join img {
     height: 100%;
-    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+    /* position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    object-fit: cover;
-    z-index: -1;
+    bottom: 0; */
 }
 
 .invitation.invitation-join .time {
     margin-top: auto;
-    color: white;
+    color: var(--white);
     font-size: 130px;
     display: grid;
     grid-template-areas:
@@ -148,7 +164,7 @@ img{
 .invitation.invitation-join .day:before {
     content: "";
     position: absolute;
-    background: white;
+    background: var(--white);
     width: 10px;
     height: 10px;
     top: 50%;
@@ -162,7 +178,7 @@ img{
 
 .invitation.invitation-join .location {
     text-align: center;
-    color: white;
+    color: var(--white);
     padding: 50px;
 }
 
@@ -171,9 +187,10 @@ img{
     display: grid;
     align-items: center;
     justify-content: center;
-    background: url(./10.jpg);
-    color: #FFD700;
-    color: #FFCC00;
+    background: var(--white);
+    /* background: url(./10.jpg); */
+    /* color: #FFD700; */
+    /* color: #FFCC00; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -184,8 +201,16 @@ img{
     padding: 50px;
 }
 
+.invitation.invitation-contact h3 span.confirm-presence {
+    display: block;
+}
+
 .invitation.invitation-contact h4 {
     text-align: center;
     line-height: 4;
     font-size: 25px;
+}
+
+.invitation.invitation-contact h4 span{
+    display: block;
 }

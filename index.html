@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?ver=<?php echo date("s") ?>">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Invitation aux Fiançailles de Mathilde et Ludovic</title>
 </head>
 <body>
+    <!-- IL FAUT CHANGER LE SVG du FOND DECHIRE EN BLANC #f4f4f4 -->
+    <!-- IL FAUT CHANGER LE SVG du FOND DECHIRE EN BLANC #f4f4f4 -->
+    <!-- IL FAUT CHANGER LE SVG du FOND DECHIRE EN BLANC #f4f4f4 -->
+    <!-- IL FAUT CHANGER LE SVG du FOND DECHIRE EN BLANC #f4f4f4 -->
     <div class="timeline">
         <div class="invitation invitation-intro">
-            <h1><span>Vous êtes</span> <span>cordialement</span> <span>invité</span></h1>
+            <h1><span id="you-are">Vous êtes</span> <span id="cordially">cordialement</span> <span id="invited">invité</span></h1>
         </div>
         <div class="invitation invitation-home">
             <div class="invitation-img">
-                <img src="./3.jpg">
+                <img id="home-img" src="./3.jpg">
             </div>
-            <div class="the-married-ones"><span>Mathilde</span><span> & </span><span>Ludovic</span></div>
-            <h2>Pour célébrer les<br> fiançailles de</h2>
+            <div class="the-married-ones"><span id="mathilde">Mathilde</span><span id="and"> & </span><span id="ludovic">Ludovic</span></div>
+            <h2 id="to-celebrate">Pour célébrer les<br> fiançailles de</h2>
         </div>
         <div class="invitation invitation-join">
-            <h2>Rejoignez-nous le</h2>
-            <img src="./2.jpg" alt="">
+            <h2 id="join-us">Rejoignez-nous le</h2>
+            <div class="join-img">
+                <img id="join-img" src="./2.jpg" alt="">
+            </div>
             <div class="bottom">
                 
                 <div class="time">
-                    <div class="day">21</div>
-                    <div class="month">07</div>
-                    <div class="year">2024</div>
+                    <div id="day" class="day">21</div>
+                    <div id="month" class="month">07</div>
+                    <div id="year" class="year">2024</div>
                 </div>
                 <div class="location">
-                    <p>à 12h00 chez Irise Traiteur à Saint-Joseph</p>
+                    <p id="location">à 12h00 chez Irise Traiteur à Saint-Joseph</p>
                 </div>
             </div>
         </div>
         <div class="invitation invitation-contact">
-            <h3>Merci<br> de confirmer votre présence</h3>
-            <h4>Au plus tard, le <br><span>1er juillet</span></h4>
+            <h3><span class="confirm-presence">Merci</span><span class="confirm-presence">de</span><span class="confirm-presence">confirmer</span><span class="confirm-presence">votre</span><span class="confirm-presence">présence</span></h3>
+            <h4><span id="before">Au plus tard, le</span> <span id="last_date">1er juillet</span></h4>
         </div>
     </div>
 
@@ -47,6 +53,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./script.js?ver=<?php echo date("s") ?>"></script>
 </body>
 </html>
