@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("load", (event) => {
+    // return
     gsap.registerPlugin(Flip,ScrollTrigger,Observer)
     
     gsap.set("#mathilde, #and, #ludovic", {opacity: 0})
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.set("#join-us", {opacity: 0})
     gsap.set("#day", {x: -250})
     gsap.set("#month", {x: 250})
-    gsap.set("#year", {y: 250})
+    gsap.set("#year", {y: 500})
     gsap.set("#location", {rotation: 0, opacity: 0})
 
     gsap.set(".confirm-presence", {x: -100, opacity: 0})
@@ -71,7 +72,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             .to("#last_date", {y: 0, opacity: 1, duration: 0.5})
 
     }
-    
     render_intro_timeline()
 
 

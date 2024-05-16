@@ -23,9 +23,91 @@ img{
     display: none !important;
 }
 
+@font-face {
+    font-family: 'Ananda';
+    src: local('Ananda'),
+         url('./fonts/Ananda.ttf') format('truetype'), /* Chemin vers le fichier TTF */
+         url('./fonts/Ananda.otf') format('opentype'); /* Chemin vers le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Abellaice';
+    src: local('Abellaice'),
+         url('./fonts/Abellaice.ttf') format('truetype'); /* Chemin vers le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butterfly';
+    src: local('Butterfly'),
+         url('./fonts/Butterfly.ttf') format('truetype'), /* Chemin vers le fichier TTF */
+         url('./fonts/Butterfly.otf') format('opentype'); /* Chemin vers le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butterscotch';
+    src: local('Butterscotch'),
+         url('./fonts/Butterscotch.ttf') format('truetype'), /* Chemin vers le fichier TTF */
+         url('./fonts/Butterscotch.otf') format('opentype'); /* Chemin vers le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cherolina';
+    src: local('Cherolina'),
+         url('./fonts/Cherolina.ttf') format('truetype'), /* Chemin vers le fichier TTF */
+         url('./fonts/Cherolina.otf') format('opentype'); /* Chemin vers le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Madina';
+    src: local('Madina'),
+         url('./fonts/Madina.ttf') format('truetype'), /* Chemin vers le fichier TTF */
+         url('./fonts/Madina.otf') format('opentype'); /* Chemin vers le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SulatRizal';
+    src: local('SulatRizal'),
+         url('./fonts/SulatRizal.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SulatRizalBold';
+    src: local('SulatRizalBold'),
+         url('./fonts/SulatRizalBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/**
+ * 
+ * 
+    font-family: 'Abellaice';
+    font-family: 'Ananda';
+    font-family: 'Butterfly';
+    font-family: 'Butterscotch';
+    font-family: 'Cherolina';
+    font-family: 'Madina';
+    font-family: 'SulatRizal';
+    font-family: 'SulatRizalBold';
+ */
 .invitation, .timeline{
     height: 100%;
     width: 100%;
+    /* outline: 5px solid red; */
 }
 
 .invitation {
@@ -42,12 +124,14 @@ img{
 
 .invitation.invitation-intro h1 span {
     display: block;
-    line-height: 0.85;
+    line-height: 1.5;
     text-align: center;
+    font-size: 42px;
+    font-family: 'SulatRizal';
 }
 
 .invitation.invitation-intro h1 span:nth-child(2) {
-    color: red;
+    font-family: 'SulatRizalBold';
 }
 
 .invitation.invitation-home {
@@ -64,11 +148,12 @@ img{
 .invitation.invitation-home .invitation-img::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    height: 20px;
+    bottom: -5px;
+    height: 40px;
     width: 100%;
     left: 0;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg) bottom;
+    /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg) bottom; */
+    background: url("./rip.svg") bottom;
     background-size: 200%;
     transform: rotate(180deg);
 }
@@ -81,6 +166,9 @@ img{
     top: 45px;
     color: var(--white);
     text-shadow: 1px 1px 24px #0a0a0a;
+    font-family: 'Ananda';
+    font-family: 'Abellaice';
+    font-weight: 100;
 }
 
 .invitation.invitation-home .the-married-ones {
@@ -88,18 +176,22 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateY(-2px);
+    background: var(--white);
 }
 
 .invitation.invitation-home .the-married-ones span {
     display: block;
-    line-height: 0.75;
+    line-height: 1;
     text-align: center;
     font-size: 65px;
-    text-transform: uppercase;
+    font-family: 'SulatRizal';
 }
 
 .invitation.invitation-home .the-married-ones span:nth-child(2) {
-    color: red;
+    font-size: 60px;
+    font-family: 'Cherolina';
+    font-weight: bold;
 }
 
 .invitation.invitation-join {
@@ -126,6 +218,9 @@ img{
     left: 0;
     right: 0;
     z-index: 1;
+    font-family: 'Ananda';
+    font-family: 'Abellaice';
+    font-weight: 100;
 }
 
 .invitation.invitation-join .join-img {
@@ -157,6 +252,12 @@ img{
     justify-content: center;
 }
 
+.invitation.invitation-join .day, .invitation.invitation-join .month, .invitation.invitation-join .year {
+    font-family: 'SulatRizal';
+    font-size: 100px;
+    line-height: 1.5;
+}
+
 .invitation.invitation-join .day {
     position: relative;
 }
@@ -174,12 +275,22 @@ img{
 
 .invitation.invitation-join .year {
     grid-area: year;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
 }
 
 .invitation.invitation-join .location {
     text-align: center;
     color: var(--white);
     padding: 50px;
+    
+}
+
+.invitation.invitation-join p#location {
+    font-family: 'Abellaice';
+    font-size: 24px;
+    font-weight: 100;
 }
 
 .invitation.invitation-contact {
@@ -196,9 +307,11 @@ img{
 }
 
 .invitation.invitation-contact h3 {
-    font-size: 60px;
+    font-size: 40px;
+    line-height: 1.5;
     text-align: center;
     padding: 50px;
+    font-family: 'SulatRizal';
 }
 
 .invitation.invitation-contact h3 span.confirm-presence {
@@ -209,8 +322,12 @@ img{
     text-align: center;
     line-height: 4;
     font-size: 25px;
+    font-family: 'Abellaice';
+    font-weight: 100;
 }
 
 .invitation.invitation-contact h4 span{
     display: block;
 }
+
+
